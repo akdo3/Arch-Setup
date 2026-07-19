@@ -20,7 +20,7 @@ cd .. && rm -rf yay
 
 ### System Utilities & CLI Tools
 ```bash
-yay -S waybar visual-studio-code-bin zen-browser-bin neovim fastfetch zip unzip fuzzel yazi --needed
+yay -S waybar visual-studio-code-bin zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse --needed
 ```
 
 ## 4. Wine Installation
