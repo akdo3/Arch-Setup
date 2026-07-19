@@ -8,8 +8,6 @@
 sudo pacman -Syu
 ```
 
----
-
 ## 2. AUR Helper (yay)
 
 ```bash
@@ -20,18 +18,11 @@ makepkg -si
 cd .. && rm -rf yay
 ```
 
----
-
 ## 3. Package Installation
 
 ### System Utilities & CLI Tools
 ```bash
-sudo pacman -S neovim fastfetch zip unzip fuzzel yazi --needed
-```
-
-### AUR Packages (via yay)
-```bash
-yay -S visual-studio-code-bin spotify discord
+yay -S waybar visual-studio-code-bin zen-browser-bin neovim fastfetch zip unzip fuzzel yazi --needed
 ```
 
 ---
