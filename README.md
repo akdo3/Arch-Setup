@@ -36,7 +36,10 @@ uncomment in the bottom:
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
-فخ
 
+to use it:
+```
+wine app-path
+```
 
 ---
