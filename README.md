@@ -24,8 +24,6 @@ cd .. && rm -rf yay
 
 ## 3. Package Installation
 
-Run the commands below to install essential applications categorized by utility.
-
 ### System Utilities & CLI Tools
 ```bash
 sudo pacman -S neovim fastfetch zip unzip fuzzel yazi --needed
