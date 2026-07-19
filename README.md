@@ -31,15 +31,20 @@ sudo pacman -Syu
 sudo pacman -S wine winetricks wine-mono wine-gecko --needed
 ```
 
-uncomment in the bottom:
+Uncomment in the bottom:
 ```
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
 
-to use it:
+To use it:
 ```
 wine app-path
+```
+
+To use the GUI:
+```
+yay winegui --needed
 ```
 
 ---
