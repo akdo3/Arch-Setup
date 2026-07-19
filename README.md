@@ -1,7 +1,5 @@
 # Arch-Setup
 
----
-
 ## 1. System Update
 
 ```bash
@@ -24,5 +22,21 @@ cd .. && rm -rf yay
 ```bash
 yay -S waybar visual-studio-code-bin zen-browser-bin neovim fastfetch zip unzip fuzzel yazi --needed
 ```
+
+## 4. Wine Installation
+
+```
+sudo nvim /etc/pacman.conf
+sudo pacman -Syu
+sudo pacman -S wine winetricks wine-mono wine-gecko --needed
+```
+
+uncomment in the bottom:
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+فخ
+
 
 ---
