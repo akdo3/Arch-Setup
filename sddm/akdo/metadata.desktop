@@ -1,0 +1,11 @@
+[SddmGreeterTheme]
+Name=sddm-akdo-theme
+Description=sddm-akdo-theme made by me
+Author=akdo
+Type=sddm-theme
+Version=1.0
+ConfigFile=theme.conf
+Screenshot=Backgrounds/pixel_sakura_static.png
+MainScript=Main.qml
+Theme-Id=sddm-akdo-theme
+QtVersion=6
