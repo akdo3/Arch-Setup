@@ -2,7 +2,7 @@
 
 * {
     font-family: "Iosevka Nerd Font Propo", "JetBrainsMono Nerd Font", "Cairo", "SF Pro Display", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     min-height: 0;
     margin: 0;
@@ -10,6 +10,7 @@
     border: none;
     border-radius: 0;
     text-shadow: none;
+    box-shadow: none;
 }
 
 window#waybar {
@@ -17,11 +18,12 @@ window#waybar {
 }
 
 tooltip {
-    background-color: @surface_container_highest;
-    border: 1px solid alpha(@outline, 0.25);
-    border-radius: 12px;
+    background-color: alpha(@surface_container_highest, 0.95);
+    background-image: linear-gradient(135deg, alpha(@surface_container_highest, 0.96), alpha(@surface_container_high, 0.92));
+    border: 1px solid alpha(@outline, 0.22);
+    border-radius: 14px;
     padding: 8px 14px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
 }
 
 tooltip label {
@@ -31,32 +33,34 @@ tooltip label {
 }
 
 .modules-left,
+.modules-center,
 .modules-right {
-    background-color: alpha(@surface, 0.9);
-    background-image: linear-gradient(135deg, alpha(@surface_container_low, 0.95), alpha(@surface_container_high, 0.85));
-    border: 1px solid alpha(@outline, 0.15);
+    background-color: alpha(@surface_container_low, 0.85);
+    background-image: linear-gradient(135deg, alpha(@surface_container_high, 0.9), alpha(@surface_container_lowest, 0.78));
+    border: 1px solid alpha(@outline, 0.18);
     border-radius: 18px;
-    margin: 0;
-    padding: 2px 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), inset 0 1px 0 alpha(@on_surface, 0.1);
+    margin-bottom: 2px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), inset 0 1px 0 alpha(@on_surface, 0.14);
+}
+
+.modules-left,
+.modules-right {
+    padding: 2px 8px;
 }
 
 .modules-center {
-    background-color: @surface;
-    border: 1px solid alpha(@outline, 0.2);
-    border-radius: 18px;
-    margin: 0;
     padding: 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), inset 0 1px 0 alpha(@on_surface, 0.1);
 }
 
 #custom-launcher {
     color: @primary;
-    font-size: 18px;
-    padding: 0 12px 0 8px;
-    margin: 4px 2px;
-    border-radius: 12px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 3px 2px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #custom-launcher:hover {
@@ -65,80 +69,110 @@ tooltip label {
 }
 
 #workspaces {
-    padding: 0;
+    padding: 0 2px;
 }
 
 #workspaces button {
-    color: alpha(@on_surface_variant, 0.9);
+    background: transparent;
+    background-color: transparent;
+    color: alpha(@on_surface, 0.75);
     padding: 0 8px;
-    margin: 4px 2px;
+    margin: 3px 2px;
     border-radius: 10px;
-    min-width: 16px;
+    min-width: 22px;
     font-size: 13px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#workspaces button label {
+    color: inherit;
+    font-weight: inherit;
 }
 
 #workspaces button:hover {
-    background-color: alpha(@primary_container, 0.5);
-    color: @on_surface;
+    background: alpha(@primary_container, 0.6);
+    background-color: alpha(@primary_container, 0.6);
+    color: @on_primary_container;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button:hover label {
+    color: @on_primary_container;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
     background-color: @primary;
-    background-image: linear-gradient(135deg, @primary, alpha(@primary, 0.9));
+    background-image: linear-gradient(135deg, @primary, alpha(@primary_fixed_dim, 0.9));
     color: @on_primary;
-    min-width: 32px;
-    box-shadow: 0 3px 8px alpha(@primary, 0.3);
+    min-width: 34px;
+    font-weight: 800;
+    box-shadow: 0 3px 12px alpha(@primary, 0.4);
+}
+
+#workspaces button.active label,
+#workspaces button.focused label {
+    color: @on_primary;
 }
 
 #workspaces button.urgent {
     background-color: @error;
-    background-image: linear-gradient(135deg, @error, alpha(@error, 0.8));
     color: @on_error;
     animation: urgent-pulse 2s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
 }
 
+#workspaces button.urgent label {
+    color: @on_error;
+}
+
 #pulseaudio {
-    color: @on_surface;
+    color: @secondary;
     padding: 0 10px;
+    margin: 3px 2px;
     border-radius: 10px;
-    margin: 4px 2px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    background-color: transparent;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #pulseaudio:hover {
-    background-color: alpha(@primary, 0.2);
-    color: @primary;
+    background-color: alpha(@secondary_container, 0.55);
+    color: @on_secondary_container;
+}
+
+#pulseaudio.muted {
+    color: alpha(@on_surface_variant, 0.6);
 }
 
 #cava {
-    margin: 4px 8px 4px 4px;
-    font-size: 14px;
-    letter-spacing: 1px;
     color: @tertiary;
-    opacity: 1;
-    transition: none;
+    padding: 0 8px;
+    margin: 3px 4px 3px 2px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: transparent;
 }
 
 #clock.left,
 #clock.right {
     color: @on_primary_container;
     background-color: @primary_container;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 800;
     padding: 0 14px;
     margin: 0;
-    box-shadow: inset 0 1px 0 alpha(@on_primary_container, 0.15);
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #clock.left {
-    border-radius: 16px 0 0 16px;
+    border-radius: 18px 0 0 18px;
     border-right: 1px solid alpha(@outline, 0.2);
 }
 
 #clock.right {
-    border-radius: 0 16px 16px 0;
+    border-radius: 0 18px 18px 0;
     border-left: 1px solid alpha(@outline, 0.2);
 }
 
@@ -149,41 +183,29 @@ tooltip label {
 }
 
 #custom-prayer {
-    background-color: @surface_container_highest;
+    color: @on_surface;
+    background-color: alpha(@surface_container_highest, 0.5);
     border-left: 1px solid alpha(@outline, 0.2);
     border-right: 1px solid alpha(@outline, 0.2);
-    padding: 0 20px;
+    padding: 0 18px;
     margin: 0;
-    font-size: 15px;
-    font-weight: 900;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-size: 13px;
+    font-weight: 800;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #custom-prayer:hover {
-    background-color: @surface_bright;
-}
-
-#custom-prayer.prayer {
-    color: @on_surface;
+    background-color: alpha(@surface_bright, 0.8);
 }
 
 #custom-prayer.prayer.done {
     color: @primary;
-    background-color: alpha(@primary, 0.15);
+    background-color: alpha(@primary, 0.18);
 }
 
 #custom-prayer.mpris {
-    background-color: @surface_container_highest;
     color: @tertiary;
-    border-left: 1px solid alpha(@outline, 0.2);
-    border-right: 1px solid alpha(@outline, 0.2);
-    padding: 0 20px;
-    margin: 0;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-#custom-prayer.mpris:hover {
-    background-color: @surface_bright;
+    background-color: alpha(@tertiary_container, 0.35);
 }
 
 #cpu,
@@ -192,10 +214,12 @@ tooltip label {
 #network,
 #battery {
     color: @on_surface;
-    padding: 0 8px;
+    padding: 0 9px;
+    margin: 3px 2px;
     border-radius: 10px;
-    margin: 4px 2px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    background-color: transparent;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #cpu label,
@@ -205,6 +229,7 @@ tooltip label {
 #battery label {
     padding: 0;
     margin: 0;
+    color: inherit;
 }
 
 #cpu:hover,
@@ -213,43 +238,35 @@ tooltip label {
 #network:hover,
 #battery:hover {
     background-color: alpha(@primary, 0.2);
+    color: @primary_fixed;
+}
+
+#battery.charging,
+#battery.plugged {
     color: @primary;
-    box-shadow: inset 0 1px 0 alpha(@primary, 0.2);
+    background-color: alpha(@primary_container, 0.3);
 }
 
-#battery.charging {
-    color: @primary;
-    background-color: alpha(@primary, 0.15);
-}
-
-#battery.warning:not(.charging) {
-    color: @tertiary;
-    background-color: alpha(@tertiary, 0.15);
-}
-
-#battery.critical:not(.charging) {
-    color: @error;
-    background-color: alpha(@error, 0.15);
-    animation: blink-critical 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
-}
-
+#battery.warning:not(.charging),
 #cpu.warning,
 #memory.warning,
 #temperature.warning {
     color: @tertiary;
-    background-color: alpha(@tertiary, 0.15);
+    background-color: alpha(@tertiary_container, 0.35);
 }
 
+#battery.critical:not(.charging),
 #cpu.critical,
 #memory.critical,
 #temperature.critical {
     color: @error;
-    background-color: alpha(@error, 0.15);
+    background-color: alpha(@error_container, 0.45);
     animation: blink-critical 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
 }
 
 #network.disconnected {
     color: @error;
+    background-color: alpha(@error_container, 0.3);
     animation: disconnected-blink 2s ease-in-out infinite;
 }
 
@@ -265,18 +282,24 @@ tooltip label {
 }
 
 @keyframes disconnected-blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes blink-critical {
     0% {
-        background-color: alpha(@error, 0.08);
+        background-color: alpha(@error, 0.15);
         box-shadow: inset 0 0 4px alpha(@error, 0.2);
     }
     100% {
-        background-color: alpha(@error, 0.25);
+        background-color: alpha(@error, 0.45);
         box-shadow: inset 0 0 10px alpha(@error, 0.4);
     }
 }
