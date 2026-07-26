@@ -1,0 +1,282 @@
+@import "colors.css";
+
+* {
+    font-family: "Iosevka Nerd Font Propo", "JetBrainsMono Nerd Font", "Cairo", "SF Pro Display", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    text-shadow: none;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+tooltip {
+    background-color: @surface_container_highest;
+    border: 1px solid alpha(@outline, 0.25);
+    border-radius: 12px;
+    padding: 8px 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+tooltip label {
+    color: @on_surface;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.modules-left,
+.modules-right {
+    background-color: alpha(@surface, 0.9);
+    background-image: linear-gradient(135deg, alpha(@surface_container_low, 0.95), alpha(@surface_container_high, 0.85));
+    border: 1px solid alpha(@outline, 0.15);
+    border-radius: 18px;
+    margin: 0;
+    padding: 2px 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), inset 0 1px 0 alpha(@on_surface, 0.1);
+}
+
+.modules-center {
+    background-color: @surface;
+    border: 1px solid alpha(@outline, 0.2);
+    border-radius: 18px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), inset 0 1px 0 alpha(@on_surface, 0.1);
+}
+
+#custom-launcher {
+    color: @primary;
+    font-size: 18px;
+    padding: 0 12px 0 8px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#custom-launcher:hover {
+    background-color: alpha(@primary, 0.2);
+    color: @primary_fixed;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    color: alpha(@on_surface_variant, 0.9);
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    min-width: 16px;
+    font-size: 13px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#workspaces button:hover {
+    background-color: alpha(@primary_container, 0.5);
+    color: @on_surface;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    background-color: @primary;
+    background-image: linear-gradient(135deg, @primary, alpha(@primary, 0.9));
+    color: @on_primary;
+    min-width: 32px;
+    box-shadow: 0 3px 8px alpha(@primary, 0.3);
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    background-image: linear-gradient(135deg, @error, alpha(@error, 0.8));
+    color: @on_error;
+    animation: urgent-pulse 2s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+}
+
+#pulseaudio {
+    color: @on_surface;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin: 4px 2px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#pulseaudio:hover {
+    background-color: alpha(@primary, 0.2);
+    color: @primary;
+}
+
+#cava {
+    margin: 4px 8px 4px 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: @tertiary;
+    opacity: 1;
+    transition: none;
+}
+
+#clock.left,
+#clock.right {
+    color: @on_primary_container;
+    background-color: @primary_container;
+    font-size: 14px;
+    padding: 0 14px;
+    margin: 0;
+    box-shadow: inset 0 1px 0 alpha(@on_primary_container, 0.15);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#clock.left {
+    border-radius: 16px 0 0 16px;
+    border-right: 1px solid alpha(@outline, 0.2);
+}
+
+#clock.right {
+    border-radius: 0 16px 16px 0;
+    border-left: 1px solid alpha(@outline, 0.2);
+}
+
+#clock.left:hover,
+#clock.right:hover {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#custom-prayer {
+    background-color: @surface_container_highest;
+    border-left: 1px solid alpha(@outline, 0.2);
+    border-right: 1px solid alpha(@outline, 0.2);
+    padding: 0 20px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 900;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#custom-prayer:hover {
+    background-color: @surface_bright;
+}
+
+#custom-prayer.prayer {
+    color: @on_surface;
+}
+
+#custom-prayer.prayer.done {
+    color: @primary;
+    background-color: alpha(@primary, 0.15);
+}
+
+#custom-prayer.mpris {
+    background-color: @surface_container_highest;
+    color: @tertiary;
+    border-left: 1px solid alpha(@outline, 0.2);
+    border-right: 1px solid alpha(@outline, 0.2);
+    padding: 0 20px;
+    margin: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#custom-prayer.mpris:hover {
+    background-color: @surface_bright;
+}
+
+#cpu,
+#memory,
+#temperature,
+#network,
+#battery {
+    color: @on_surface;
+    padding: 0 8px;
+    border-radius: 10px;
+    margin: 4px 2px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#cpu label,
+#memory label,
+#temperature label,
+#network label,
+#battery label {
+    padding: 0;
+    margin: 0;
+}
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#network:hover,
+#battery:hover {
+    background-color: alpha(@primary, 0.2);
+    color: @primary;
+    box-shadow: inset 0 1px 0 alpha(@primary, 0.2);
+}
+
+#battery.charging {
+    color: @primary;
+    background-color: alpha(@primary, 0.15);
+}
+
+#battery.warning:not(.charging) {
+    color: @tertiary;
+    background-color: alpha(@tertiary, 0.15);
+}
+
+#battery.critical:not(.charging) {
+    color: @error;
+    background-color: alpha(@error, 0.15);
+    animation: blink-critical 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+}
+
+#cpu.warning,
+#memory.warning,
+#temperature.warning {
+    color: @tertiary;
+    background-color: alpha(@tertiary, 0.15);
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    color: @error;
+    background-color: alpha(@error, 0.15);
+    animation: blink-critical 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+}
+
+#network.disconnected {
+    color: @error;
+    animation: disconnected-blink 2s ease-in-out infinite;
+}
+
+@keyframes urgent-pulse {
+    0% {
+        box-shadow: 0 0 4px alpha(@error, 0.3);
+        opacity: 1;
+    }
+    100% {
+        box-shadow: 0 0 12px alpha(@error, 0.7);
+        opacity: 0.9;
+    }
+}
+
+@keyframes disconnected-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes blink-critical {
+    0% {
+        background-color: alpha(@error, 0.08);
+        box-shadow: inset 0 0 4px alpha(@error, 0.2);
+    }
+    100% {
+        background-color: alpha(@error, 0.25);
+        box-shadow: inset 0 0 10px alpha(@error, 0.4);
+    }
+}

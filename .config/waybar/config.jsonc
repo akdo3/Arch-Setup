@@ -1,0 +1,215 @@
+{
+    "layer": "top",
+    "spacing": 4,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "pulseaudio",
+        "cava"
+    ],
+    "modules-center": [
+        "clock#left",
+        "custom/prayer",
+        "clock#right"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "temperature",
+        "network",
+        "battery"
+    ],
+    "custom/launcher": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "pkill fuzzel; fuzzel"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "format-muted": "󰖁 {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer -i 2",
+        "on-scroll-down": "pamixer -d 2",
+        "tooltip-format": "Volume: {volume}%",
+        "max-volume": 150
+    },
+    "cava": {
+        "framerate": 30,
+        "autosens": 0,
+        "sensitivity": 1,
+        "bars": 12,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.25,
+        "input_delay": 2,
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+    "custom/prayer": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/prayer",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "~/.config/waybar/scripts/prayer primary && pkill -RTMIN+8 waybar",
+        "on-click-right": "~/.config/waybar/scripts/prayer right && pkill -RTMIN+8 waybar",
+        "on-click-middle": "~/.config/waybar/scripts/prayer middle && pkill -RTMIN+8 waybar",
+        "signal": 8
+    },
+    "clock#left": {
+        "timezone": "Africa/Cairo",
+        "format": "{:%I}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "interval": 1,
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "format": {
+                "months": "<span color='#f38ba8'><b>{}</b></span>",
+                "days": "<span color='#cdd6f4'><b>{}</b></span>",
+                "weeks": "<span color='#89b4fa'><b>W{}</b></span>",
+                "weekdays": "<span color='#fab387'><b>{}</b></span>",
+                "today": "<span color='#1e1e2e' background='#f38ba8'><b>{}</b></span>"
+            }
+        }
+    },
+    "clock#right": {
+        "timezone": "Africa/Cairo",
+        "format": "{:%M}",
+        "format-alt": " {:%a %d %b}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "interval": 1,
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "format": {
+                "months": "<span color='#f38ba8'><b>{}</b></span>",
+                "days": "<span color='#cdd6f4'><b>{}</b></span>",
+                "weeks": "<span color='#89b4fa'><b>W{}</b></span>",
+                "weekdays": "<span color='#fab387'><b>{}</b></span>",
+                "today": "<span color='#1e1e2e' background='#f38ba8'><b>{}</b></span>"
+            }
+        }
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{icon} {usage}%",
+        "format-icons": [
+            "󰡳",
+            "󰡴",
+            "󰡵"
+        ],
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip-format": "CPU Load: {load}\nAvg Freq: {avg_frequency} GHz\nMax Freq: {max_frequency} GHz",
+        "on-click": "kitty -e btop"
+    },
+    "memory": {
+        "interval": 1,
+        "on-click": "kitty -e btop",
+        "format": "󰍛 {percentage}%",
+        "format-alt": "󰍛 {used:0.1f}GB",
+        "tooltip-format": "RAM: {used:0.1f}GB / {total:0.1f}GB\nSwap: {swapUsed:0.1f}GB / {swapTotal:0.1f}GB",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "temperature": {
+        "thermal-zone": 9,
+        "interval": 2,
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-critical": "{icon} {temperatureC}°C",
+        "tooltip-format": "Temp: {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+        "interval": 2,
+        "format": "{ifname}",
+        "format-wifi": "󰇚 {bandwidthDownBytes}  󰕒 {bandwidthUpBytes}  ",
+        "format-ethernet": "{bandwidthDownBytes} 󰇚 {bandwidthUpBytes} 󰕒 ",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "Network: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\nDownload: {bandwidthDownBytes} | Upload: {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}\nDownload: {bandwidthDownBytes} | Upload: {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": {
+            "default": [
+                "󰂎",
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ],
+            "warning": "󱃍",
+            "critical": "󱟩"
+        },
+        "tooltip-format": "{timeTo}",
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    }
+}
