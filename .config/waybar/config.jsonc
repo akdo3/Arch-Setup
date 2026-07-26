@@ -1,10 +1,10 @@
 {
     "layer": "top",
-    "spacing": 4,
+    "spacing": 0,
     "margin-top": 6,
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-bottom": 0,
+    "margin-bottom": 2,
+    "margin-left": 12,
+    "margin-right": 12,
     "reload_style_on_change": true,
     "modules-left": [
         "custom/launcher",
@@ -93,7 +93,7 @@
         "format": "{}",
         "exec": "~/.config/waybar/scripts/prayer",
         "return-type": "json",
-        "interval": 1,
+        "interval": 2,
         "on-click": "~/.config/waybar/scripts/prayer primary && pkill -RTMIN+8 waybar",
         "on-click-right": "~/.config/waybar/scripts/prayer right && pkill -RTMIN+8 waybar",
         "on-click-middle": "~/.config/waybar/scripts/prayer middle && pkill -RTMIN+8 waybar",
@@ -104,7 +104,7 @@
         "format": "{:%I}",
         "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "interval": 1,
+        "interval": 2,
         "calendar": {
             "mode": "month",
             "weeks-pos": "right",
@@ -122,7 +122,7 @@
         "format": "{:%M}",
         "format-alt": " {:%a %d %b}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "interval": 1,
+        "interval": 2,
         "calendar": {
             "mode": "month",
             "weeks-pos": "right",
@@ -136,7 +136,7 @@
         }
     },
     "cpu": {
-        "interval": 1,
+        "interval": 2,
         "format": "{icon} {usage}%",
         "format-icons": [
             "󰡳",
@@ -151,7 +151,7 @@
         "on-click": "kitty -e btop"
     },
     "memory": {
-        "interval": 1,
+        "interval": 2,
         "on-click": "kitty -e btop",
         "format": "󰍛 {percentage}%",
         "format-alt": "󰍛 {used:0.1f}GB",
@@ -186,6 +186,7 @@
         "tooltip-format-disconnected": "Disconnected"
     },
     "battery": {
+        "interval": 2,
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰂄 {capacity}%",
