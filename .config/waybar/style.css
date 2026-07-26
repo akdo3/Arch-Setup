@@ -23,7 +23,7 @@ tooltip {
     border: 1px solid alpha(@outline, 0.22);
     border-radius: 14px;
     padding: 8px 14px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 tooltip label {
@@ -40,7 +40,7 @@ tooltip label {
     border: 1px solid alpha(@outline, 0.18);
     border-radius: 18px;
     margin-bottom: 2px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), inset 0 1px 0 alpha(@on_surface, 0.14);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22), inset 0 1px 0 alpha(@on_surface, 0.14);
 }
 
 .modules-left,
@@ -107,7 +107,7 @@ tooltip label {
     background-color: @primary;
     background-image: linear-gradient(135deg, @primary, alpha(@primary_fixed_dim, 0.9));
     color: @on_primary;
-    min-width: 34px;
+    min-width: 26px;
     font-weight: 800;
     box-shadow: 0 3px 12px alpha(@primary, 0.4);
 }
@@ -133,6 +133,7 @@ tooltip label {
     margin: 3px 2px;
     border-radius: 10px;
     border: none;
+    font-size: 14px;
     background-color: transparent;
     transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -159,7 +160,7 @@ tooltip label {
 #clock.right {
     color: @on_primary_container;
     background-color: @primary_container;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
     padding: 0 14px;
     margin: 0;
@@ -208,6 +209,11 @@ tooltip label {
     background-color: alpha(@tertiary_container, 0.35);
 }
 
+#custom-sysicon {
+    font-size: 16px;
+}
+
+#custom-sysicon,
 #cpu,
 #memory,
 #temperature,
@@ -222,6 +228,7 @@ tooltip label {
     transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+#custom-sysicon label,
 #cpu label,
 #memory label,
 #temperature label,
@@ -232,6 +239,7 @@ tooltip label {
     color: inherit;
 }
 
+#custom-sysicon:hover,
 #cpu:hover,
 #memory:hover,
 #temperature:hover,
@@ -241,24 +249,34 @@ tooltip label {
     color: @primary_fixed;
 }
 
+#custom-power {
+    color: @error;
+    padding: 0 10px;
+    margin: 3px 2px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    background-color: transparent;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#custom-power:hover {
+    background-color: alpha(@primary, 0.2);
+    color: @error;
+}
+
 #battery.charging,
 #battery.plugged {
     color: @primary;
     background-color: alpha(@primary_container, 0.3);
 }
 
-#battery.warning:not(.charging),
-#cpu.warning,
-#memory.warning,
-#temperature.warning {
+#battery.warning:not(.charging) {
     color: @tertiary;
     background-color: alpha(@tertiary_container, 0.35);
 }
 
-#battery.critical:not(.charging),
-#cpu.critical,
-#memory.critical,
-#temperature.critical {
+#battery.critical:not(.charging) {
     color: @error;
     background-color: alpha(@error_container, 0.45);
     animation: blink-critical 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
