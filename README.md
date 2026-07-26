@@ -47,4 +47,10 @@ To use the GUI:
 yay winegui --needed
 ```
 
----
+## 5. rust compile
+
+```
+cargo build --release
+cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
+```
+
