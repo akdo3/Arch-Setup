@@ -19,6 +19,7 @@ cd .. && rm -rf yay
 ## 1.3 Package Installation
 
 ### System Utilities & CLI Tools
+
 ```bash
 yay -S waybar visual-studio-code-bin zen-browser-bin google-chrome neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv zed --needed
 ```
@@ -31,11 +32,39 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
 ### Light Mode
+
 ```
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 ```
 
-## 2. Wine Installation
+## 2. Fix Wifi
+
+```
+sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+```
+
+And Put This:
+```
+[connection]
+wifi.powersave = 2
+```
+
+```
+sudo nano /etc/sysctl.d/99-sysctl.conf
+```
+
+And Put This:
+```
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+```
+
+Restart:
+```
+sudo systemctl restart NetworkManager
+```
+
+## 3. Wine Installation
 
 ```
 sudo nvim /etc/pacman.conf
@@ -58,13 +87,14 @@ To use the GUI:
 ```
 yay winegui --needed
 ```
-## 3. Python
+
+## 4. Python
 
 ```
 yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
 ```
 
-## 4. Rust Compile
+## 5. Rust Compile
 
 ```
 cargo build --release
