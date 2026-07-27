@@ -49,7 +49,7 @@ yay winegui --needed
 ## 5. Python
 
 ```
-yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn --needed
+yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
 ```
 
 ## 6. Rust Compile
