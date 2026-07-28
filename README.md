@@ -64,7 +64,29 @@ Restart:
 sudo systemctl restart NetworkManager
 ```
 
-## 3. Wine Installation
+
+## 3. Langues
+
+### 3.1 Python
+
+```bash
+yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
+```
+
+### 3.2 Rust
+
+#### Installation
+```
+yay -S rustup --needed
+```
+
+####  Compile
+```bash
+cargo build --release
+cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
+```
+
+## 4. Wine Installation
 
 ```bash
 sudo nvim /etc/pacman.conf
@@ -87,25 +109,3 @@ To use the GUI:
 ```bash
 yay winegui --needed
 ```
-
-## 4. Langues
-
-### Python
-
-```bash
-yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
-```
-
-### Rust
-
-#### Installation
-```
-yay -S rustup --needed
-```
-
-####  Compile
-```bash
-cargo build --release
-cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
-```
-
