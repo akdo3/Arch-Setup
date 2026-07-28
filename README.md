@@ -18,8 +18,6 @@ cd .. && rm -rf yay
 
 ## 1.3 Package Installation
 
-### System Utilities & CLI Tools
-
 ```bash
 yay -S waybar visual-studio-code-bin zen-browser-bin google-chrome neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv zed --needed
 ```
@@ -90,14 +88,22 @@ To use the GUI:
 yay winegui --needed
 ```
 
-## 4. Python
+## 4. Langues
+
+### Python
 
 ```bash
 yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
 ```
 
-## 5. Rust Compile
+### Rust
 
+#### Installation
+```
+yay -S rustup --needed
+```
+
+####  Compile
 ```bash
 cargo build --release
 cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
