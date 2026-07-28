@@ -1,0 +1,164 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+
+{
+  "file_types": {
+    "JSONC": ["json"]
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lint": {
+            "ignore": ["I001", "F401"]
+          }
+        }
+      }
+    }
+  },
+  "cli_default_open_behavior": "existing_window",
+  "preview_tabs": {
+    "enable_preview_file_from_code_navigation": true,
+    "enable_preview_from_multibuffer": true,
+    "enable_preview_from_project_panel": true,
+    "enabled": true
+  },
+  "git": {
+    "enable_diff": true,
+    "enable_status": false
+  },
+  "edit_predictions": {
+    "allow_data_collection": "no",
+    "provider": "zed"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "minimap": {
+
+  },
+  "prettier": {
+    "allowed": false
+  },
+  "completions": {
+    "lsp": true
+  },
+  "autosave": "off",
+  "tabs": {
+    "file_icons": false,
+    "git_status": false
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "title_bar": {
+    "show_onboarding_banner": true,
+    "show_menus": false,
+    "show_user_picture": false,
+    "show_user_menu": true,
+    "show_sign_in": true,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_status_icon": false
+  },
+  "inlay_hints": {
+    "show_value_hints": true
+  },
+  "jsx_tag_auto_close": {
+    "enabled": true
+  },
+  "always_treat_brackets_as_autoclosed": false,
+  "use_auto_surround": true,
+  "use_autoclose": true,
+  "use_on_type_format": true,
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "indent_guides": {
+    "enabled": true
+  },
+  "show_wrap_guides": true,
+  "vim": {
+    "show_edit_predictions_in_normal_mode": false,
+    "use_regex_search": true,
+    "default_mode": "normal",
+    "use_smartcase_find": false,
+    "toggle_relative_line_numbers": false
+  },
+  "toolbar": {
+    "agent_review": true,
+    "code_actions": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "scrollbar": {
+    "selected_symbol": true,
+    "selected_text": true,
+    "search_results": true,
+    "git_diff": true,
+    "cursors": true
+  },
+  "inline_code_actions": true,
+  "gutter": {
+    "folds": true,
+    "bookmarks": true,
+    "breakpoints": true,
+    "runnables": true,
+    "line_numbers": true
+  },
+  "drag_and_drop_selection": {
+    "enabled": true
+  },
+  "hover_popover_sticky": true,
+  "hover_popover_enabled": true,
+  "mouse_wheel_zoom": false,
+  "which_key": {
+    "enabled": true
+  },
+  "debugger": {
+    "button": true
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": false
+    },
+    "button": true
+  },
+  "terminal": {
+    "button": false
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "line_endings_button": false,
+    "cursor_position_button": true,
+    "active_language_button": false
+  },
+  "project_panel": {
+    "button": true
+  },
+  "buffer_line_height": "comfortable",
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+}
