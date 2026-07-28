@@ -18,12 +18,12 @@ cd .. && rm -rf yay
 
 ## 1.3 Package Installation
 
-### 1.3.1 Important Packages
+### Important Packages
 ```bash
 yay -S zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv zed --needed
 ```
 
-### 1.3.2 Optional Packages
+### Optional Packages
 ```
 yay -S waybar visual-studio-code-bin google-chrome --needed
 ```
