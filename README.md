@@ -28,6 +28,34 @@ yay -S zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv ze
 yay -S waybar visual-studio-code-bin google-chrome --needed
 ```
 
+## Zen Setup
+```
+touch /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
+zeditor /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
+```
+
+past this:
+```
+#urlbar[open]:not([usertyping]) .urlbarView {
+  display: none !important;
+}
+
+#urlbar[open][usertyping] .urlbarView {
+  display: block !important;
+}
+```
+
+Search:
+```
+about:config
+```
+
+then search:
+```
+toolkit.legacyUserProfileCustomizations.stylesheets
+```
+and enable it.
+
 ## 1.5 Dark/Light Mode
 
 ### Dark Mode
