@@ -28,6 +28,11 @@ yay -S zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv ze
 yay -S waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight --needed
 ```
 
+### Showcase CLI
+```
+yay -S cmatrix unicmatrix cava asciiquarium sl --needed
+```
+
 ## Zen Setup
 ```
 touch /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
