@@ -25,7 +25,7 @@ yay -S zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv ze
 
 ### Optional Packages
 ```
-yay -S waybar visual-studio-code-bin google-chrome localsend kdeconnect --needed
+yay -S waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight spacedrive --needed
 ```
 
 ## Zen Setup
