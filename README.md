@@ -33,7 +33,7 @@ yay -S waybar visual-studio-code-bin google-chrome localsend kdeconnect fileligh
 yay -S cmatrix unicmatrix cava asciiquarium sl --needed
 ```
 
-## Zen Setup
+## 1.4 Zen Setup
 ```
 touch /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
 zeditor /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
@@ -102,9 +102,33 @@ Restart:
 ```bash
 sudo systemctl restart NetworkManager
 ```
+## 3. Container
 
+### 3.1 Package Installation
+```
+yay -S distrobox podman --needed
+```
 
-## 3. Langues
+### 3.2 Create Container
+```
+distrobox-create -n testbox -i archlinux
+```
+### 3.3 Open The Container
+```
+distrobox enter testbox
+```
+
+### 3.4 Install Package
+```
+sudo pacman -Syu && sudo pacman -S 'appname'
+```
+
+### 3.5 Remove The Container
+```
+distrobox rm testbox
+```
+
+## 4. Langues
 
 ### 3.1 Python
 
@@ -125,7 +149,7 @@ cargo build --release
 cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
 ```
 
-## 4. Wine Installation
+## 5. Wine Installation
 
 ```bash
 sudo nvim /etc/pacman.conf
