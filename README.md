@@ -123,7 +123,12 @@ distrobox enter testbox
 sudo pacman -Syu && sudo pacman -S 'appname'
 ```
 
-### 3.5 Remove The Container
+### 3.5 Open GUI
+```
+distrobox-export -a 'appname'
+```
+
+### 3.6 Remove The Container
 ```
 distrobox rm testbox
 ```
