@@ -111,6 +111,11 @@ yay -S distrobox podman --needed
 
 ### 3.2 Create Container
 ```
+distrobox create --name testbox --image archlinux:latest
+```
+
+or:
+```
 distrobox-create -n testbox -i archlinux
 ```
 ### 3.3 Open The Container
