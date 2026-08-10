@@ -15,11 +15,9 @@ distrobox create --name testbox --image archlinux:latest --home ~/Documents/dist
 distrobox enter testbox
 ```
 
-### Install Package
-
-### Update The System & Install yay
+## Update The System & Install yay
 ```bash
-sudo pacman -Syu && sudo pacman -S app-name
+sudo pacman -Syu
 sudo pacman -S base-devel git --needed
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -27,7 +25,7 @@ makepkg -si
 cd .. && rm -rf yay
 ```
 
-### Open GUI For App
+## Open GUI For App
 ```bash
 distrobox-export -a app-name
 ```
