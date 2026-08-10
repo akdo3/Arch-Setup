@@ -100,12 +100,10 @@ sudo systemctl restart NetworkManager
 
 # knowledge
 
-|-----------|----------------------------|----------------------------------|
 | Topic     | Description                | Navigate                         |
 |-----------|----------------------------|----------------------------------|
 | Wine      | Open Windows Apps          | [Go →](./knowledge/Wine.md)      |
 | Languages | Programing Languages       | [Go →](./knowledge/Languages.md) |
 | Distrobox | Install And Use Another OS | [Go →](./knowledge/Distrobox.md) |
-|-----------|----------------------------|----------------------------------|
 
 
