@@ -139,31 +139,11 @@ distrobox-export -a 'appname'
 distrobox rm testbox
 ```
 
-## 4. Langues
-
-### 4.1 Python
-
-```bash
-yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
-```
-
-### 4.2 Rust
-
-#### Installation
-```
-yay -S rustup --needed
-```
-
-####  Compile
-```bash
-cargo build --release
-cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
-```
-
 # knowledge
 
 | Topic | Description | Navigate |
 |-------|-------------|----------|
 | Wine | Open Windows Apps | [Go →](./knowledge/Wine_Installation.md) |
+| Languages| Programing Languages | [Go →](./knowledge/Languages.md) |
 
 
