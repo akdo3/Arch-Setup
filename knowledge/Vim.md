@@ -2,20 +2,21 @@
 
 ## Enter Insert Mode
 
-| Character | Description                               |
-|-----------|-------------------------------------------|
-| i         | Enter Insert                              |
-| I         | Enter Insert At The Beginning Of The Line |
+All Of the Character enter Insert mode
 
-- `i` Enter Insert.
-- `I` Enter Insert At The Beginning Of The Line.
-- `a` Enter Insert After The Cursor.
-- `A` Enter Insert At The End Of The Line.
-- `o` Add A new line below the current line 
+| Character | Description                           |
+|-----------|---------------------------------------|
+| `i`       | Enter Insert                          |
+| I         | At The Beginning Of The Line          |
+| a         | After The Cursor                      |
+| A         | At The End Of The Line                |
+| o         | Add A new line below the current line |
+
 
 ## Colon(:) Commands
-- `w`  Save The File.
-- `wq` Save The File And Exit.
-- `q`  Quit.
-- `q!` Quit and Ignore Unsaved Changes.
-- 
+| Character | Description                     |
+|-----------|---------------------------------|
+| w         | Save The File                   |
+| wq        | Save The File And Exit          |
+| q         | Quit                            |
+| q!        | Quit and Ignore Unsaved Changes |
