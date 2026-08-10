@@ -105,5 +105,6 @@ sudo systemctl restart NetworkManager
 | Wine      | Open Windows Apps          | [Go →](./knowledge/Wine.md)      |
 | Languages | Programing Languages       | [Go →](./knowledge/Languages.md) |
 | Distrobox | Install And Use Another OS | [Go →](./knowledge/Distrobox.md) |
+| Vim       | How To Use Vim As Pro      | [Go →](./knowledge/Vim.md)       |
 
 
