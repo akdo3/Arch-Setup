@@ -118,6 +118,7 @@ or:
 ```
 distrobox-create -n testbox -i archlinux
 ```
+
 ### 3.3 Open The Container
 ```
 distrobox enter testbox
@@ -140,13 +141,13 @@ distrobox rm testbox
 
 ## 4. Langues
 
-### 3.1 Python
+### 4.1 Python
 
 ```bash
 yay -S python-ipykernel python-pandas python-numpy python-seaborn python-matplotlib python-scikit-learn python-pandas-stubs --needed
 ```
 
-### 3.2 Rust
+### 4.2 Rust
 
 #### Installation
 ```
