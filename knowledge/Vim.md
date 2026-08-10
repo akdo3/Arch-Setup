@@ -11,6 +11,7 @@ All Of the Character enter Insert mode
 | a         | After The Cursor                      |
 | A         | At The End Of The Line                |
 | o         | Add A new line below the current line |
+| O         | Add A new line Above the current line |
 
 
 ## Colon(:) Commands
