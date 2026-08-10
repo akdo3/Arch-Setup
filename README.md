@@ -160,26 +160,10 @@ cargo build --release
 cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
 ```
 
-## 5. Wine Installation
+# knowledge
 
-```bash
-sudo nvim /etc/pacman.conf
-sudo pacman -Syu
-sudo pacman -S wine winetricks wine-mono wine-gecko --needed
-```
+| Topic | Description | Navigate |
+|-------|-------------|----------|
+| Wine | Open Windows Apps | [Go →](./knowledge/Wine_Installation.md) |
 
-Uncomment in the bottom:
-```
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-```
 
-To use it:
-```bash
-wine app-path
-```
-
-To use the GUI:
-```bash
-yay winegui --needed
-```
