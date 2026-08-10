@@ -1,6 +1,15 @@
 # Languages
 
 ## Python
+
+### Installation
+
+#### Python
+```bash
+yay -S python --needed
+```
+
+#### Python For Jupyter
 ```bash
 yay -S python-ipykernel --needed
 ```
@@ -20,12 +29,12 @@ yay python-pandas-stubs  --needed
 
 ## Rust
 
-#### Installation
+### Installation
 ```bash
 yay -S rustup --needed
 ```
 
-####  Compile
+###  Compile
 ```bash
 cargo build --release
 cp target/release/prayer_rust ~/.config/waybar/scripts/prayer
