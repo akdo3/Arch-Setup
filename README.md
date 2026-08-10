@@ -142,8 +142,8 @@ distrobox rm testbox
 # knowledge
 
 | Topic | Description | Navigate |
-|----------|----------------------|----------|
-| Wine     | Open Windows Apps    | [Go →](./knowledge/Wine_Installation.md) |
+|----------|----------------------|----------------------------------|
+| Wine     | Open Windows Apps    | [Go →](./knowledge/Wine.md)      |
 | Languages| Programing Languages | [Go →](./knowledge/Languages.md) |
 
 
