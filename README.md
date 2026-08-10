@@ -1,39 +1,34 @@
 # Arch-Setup
 
-## 1.1 System Update
+## 1.1 System Update & Install yay
 
 ```bash
 sudo pacman -Syu
-```
-
-## 1.2 AUR Helper (yay)
-
-```bash
-sudo pacman -S --needed base-devel git
+sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -sri
 cd .. && rm -rf yay
 ```
 
-## 1.3 Package Installation
+## 1.2 Package Installation
 
 ### Important Packages
 ```bash
-yay -S zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv zed --needed
+yay -S --needed zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv zed
 ```
 
 ### Optional Packages
 ```
-yay -S waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight spacedrive --needed
+yay -S --needed waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight spacedrive
 ```
 
 ### Showcase CLI
 ```
-yay -S cmatrix unicmatrix cava asciiquarium sl --needed
+yay -S --needed cmatrix unicmatrix cava asciiquarium sl
 ```
 
-## 1.4 Zen Setup
+## 1.3 Zen Setup
 ```
 touch /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
 zeditor /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
@@ -61,7 +56,7 @@ toolkit.legacyUserProfileCustomizations.stylesheets
 ```
 and enable it.
 
-## 1.5 Dark/Light Mode
+## 1.4 Dark/Light Mode
 
 ### Dark Mode
 ```bash
@@ -102,48 +97,15 @@ Restart:
 ```bash
 sudo systemctl restart NetworkManager
 ```
-## 3. Container
-
-### 3.1 Package Installation
-```
-yay -S distrobox podman --needed
-```
-
-### 3.2 Create Container
-```
-distrobox create --name testbox --image archlinux:latest
-```
-
-or:
-```
-distrobox-create -n testbox -i archlinux
-```
-
-### 3.3 Open The Container
-```
-distrobox enter testbox
-```
-
-### 3.4 Install Package
-```
-sudo pacman -Syu && sudo pacman -S 'appname'
-```
-
-### 3.5 Open GUI
-```
-distrobox-export -a 'appname'
-```
-
-### 3.6 Remove The Container
-```
-distrobox rm testbox
-```
 
 # knowledge
 
-| Topic | Description | Navigate |
-|----------|----------------------|----------------------------------|
-| Wine     | Open Windows Apps    | [Go →](./knowledge/Wine.md)      |
-| Languages| Programing Languages | [Go →](./knowledge/Languages.md) |
+|-----------|----------------------------|----------------------------------|
+| Topic     | Description                | Navigate                         |
+|-----------|----------------------------|----------------------------------|
+| Wine      | Open Windows Apps          | [Go →](./knowledge/Wine.md)      |
+| Languages | Programing Languages       | [Go →](./knowledge/Languages.md) |
+| Distrobox | Install And Use Another OS | [Go →](./knowledge/Distrobox.md) |
+|-----------|----------------------------|----------------------------------|
 
 
