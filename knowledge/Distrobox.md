@@ -10,11 +10,6 @@ yay -S distrobox podman --needed
 distrobox create --name testbox --image archlinux:latest --home ~/Documents/distrobox-homes/testbox
 ```
 
-### or:
-```bash
-distrobox-create -n testbox -i archlinux
-```
-
 ## Open The Container
 ```bash
 distrobox enter testbox
