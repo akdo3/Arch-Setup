@@ -1,15 +1,11 @@
 # Languages
 
 ## Python
-
-### Installation
-
-#### Python
 ```bash
 yay -S python --needed
 ```
 
-#### Python For Jupyter
+### Python For Jupyter
 ```bash
 yay -S python-ipykernel --needed
 ```
