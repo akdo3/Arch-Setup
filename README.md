@@ -15,7 +15,7 @@ cd .. && rm -rf yay
 
 ### Important Packages
 ```bash
-yay -S --needed zen-browser-bin neovim fastfetch zip unzip fuzzel yazi clipse sddm mpv zed
+yay -S --needed zen-browser-bin neovim zip unzip fuzzel yazi clipse sddm mpv zed
 ```
 
 ### Optional Packages
@@ -25,7 +25,7 @@ yay -S --needed waybar visual-studio-code-bin google-chrome localsend kdeconnect
 
 ### Showcase CLI
 ```
-yay -S --needed cmatrix unicmatrix cava asciiquarium sl
+yay -S --needed fastfetch cmatrix unicmatrix cava asciiquarium sl
 ```
 
 ## 1.3 Zen Setup
