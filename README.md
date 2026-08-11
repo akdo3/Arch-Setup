@@ -100,11 +100,11 @@ sudo systemctl restart NetworkManager
 
 # knowledge
 
-| Topic     | Description                | Navigate                         |
-|-----------|----------------------------|----------------------------------|
-| Wine      | Open Windows Apps          | [Go →](./knowledge/Wine.md)      |
-| Languages | Programing Languages       | [Go →](./knowledge/Languages.md) |
-| Distrobox | Install And Use Another OS | [Go →](./knowledge/Distrobox.md) |
-| Vim       | How To Use Vim             | [Go →](./knowledge/Vim.md)       |
+| Topic                                 | Description                |
+|---------------------------------------|----------------------------|
+| [Wine](./knowledge/Wine.md)           | Open Windows Apps          |
+| [Languages](./knowledge/Languages.md) | Programing Languages       |
+| [Distrobox](./knowledge/Distrobox.md) | Install And Use Another OS |
+| [Vim](./knowledge/Vim.md)             | How To Use Vim             |
 
 
