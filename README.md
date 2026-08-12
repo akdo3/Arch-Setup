@@ -1,6 +1,6 @@
 # Arch-Setup
 
-## 1.1 System Update & Install yay
+## System Update & Install yay
 
 ```bash
 sudo pacman -Syu
@@ -20,7 +20,7 @@ sudo ufw enable
 sudo systemctl enable ufw
 ```
 
-## 1.2 Package Installation
+## Package Installation
 
 ### Important Packages
 ```bash
@@ -37,7 +37,7 @@ yay -S --needed waybar visual-studio-code-bin google-chrome localsend kdeconnect
 yay -S --needed fastfetch cmatrix unicmatrix cava asciiquarium sl
 ```
 
-## 1.3 Zen Setup
+## Zen Setup
 ```
 touch /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
 zeditor /home/akdo/.config/zen/yt41fcwo.Default (release)/chrome/userChrome.css
@@ -65,7 +65,7 @@ toolkit.legacyUserProfileCustomizations.stylesheets
 ```
 and enable it.
 
-## 1.4 Dark/Light Mode
+## Dark/Light Mode
 
 ### Dark Mode
 ```bash
@@ -78,7 +78,7 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 ```
 
-## 2. Fix Wifi
+## Fix Wifi
 
 ```bash
 sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
