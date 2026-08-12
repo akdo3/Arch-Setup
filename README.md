@@ -11,6 +11,15 @@ makepkg -sri
 cd .. && rm -rf yay
 ```
 
+## Network Security (Firewall)
+```bash
+sudo pacman -S ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+sudo systemctl enable ufw
+```
+
 ## 1.2 Package Installation
 
 ### Important Packages
