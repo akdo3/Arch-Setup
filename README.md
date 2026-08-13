@@ -80,6 +80,7 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
 ## Fix Wifi
 
+### way 1
 ```bash
 sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
 ```
@@ -90,8 +91,7 @@ And Put This:
 wifi.powersave = 2
 ```
 
----
-
+### way 2
 ```bash
 sudo nano /etc/sysctl.d/99-sysctl.conf
 ```
@@ -105,6 +105,35 @@ net.ipv6.conf.default.disable_ipv6 = 1
 Restart:
 ```bash
 sudo systemctl restart NetworkManager
+```
+
+### way 3
+```bash
+sudo nano /etc/iwd/main.conf
+```
+
+past this:
+```
+[General]
+EnableNetworkConfiguration=true
+
+[Network]
+NameResolvingService=systemd
+```
+
+restart:
+```bash
+sudo systemctl restart iwd
+```
+
+### way 4 (Disable Wi-Fi Power Save)
+```bash
+sudo nano /etc/udev/rules.d/81-wifi-powersave.rules
+```
+
+add this line:
+```
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlan*", RUN+="/usr/bin/iw dev %k set power_save off"
 ```
 
 # knowledge
