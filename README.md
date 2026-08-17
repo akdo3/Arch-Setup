@@ -131,6 +131,15 @@ add this line:
 ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlan*", RUN+="/usr/bin/iw dev %k set power_save off"
 ```
 
+## Fix Microphone
+```bash
+pavucontrol
+```
+1. Go to Input Devices.
+2. chose Microphone (unplugged)
+3. Set As Defalt.
+
+
 ## Install yay (AUR Helper)
 ```bash
 sudo pacman -S --needed git base-devel
