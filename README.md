@@ -1,14 +1,9 @@
 # Arch-Setup
 
-## System Update & Install yay
+## System Update
 
 ```bash
 sudo pacman -Syu
-sudo pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -sri
-cd .. && rm -rf yay
 ```
 
 ## Network Security (Firewall)
@@ -24,17 +19,17 @@ sudo systemctl enable ufw
 
 ### Important Packages
 ```bash
-yay -S --needed zen-browser-bin neovim zip unzip fuzzel yazi clipse sddm mpv zed
+pacman -S --needed zen-browser-bin neovim zip unzip fuzzel yazi clipse sddm mpv zed
 ```
 
 ### Optional Packages
 ```
-yay -S --needed waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight spacedrive
+pacman -S --needed waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight spacedrive
 ```
 
 ### Showcase CLI
 ```
-yay -S --needed fastfetch cmatrix unicmatrix cava asciiquarium sl
+pacman -S --needed fastfetch cmatrix unicmatrix cava asciiquarium sl
 ```
 
 ## Zen Setup
@@ -134,6 +129,15 @@ sudo nano /etc/udev/rules.d/81-wifi-powersave.rules
 add this line:
 ```
 ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlan*", RUN+="/usr/bin/iw dev %k set power_save off"
+```
+
+## Install yay (AUR Helper)
+```bash
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -sri
+cd .. && rm -rf yay
 ```
 
 # knowledge
