@@ -19,12 +19,12 @@ sudo systemctl enable ufw
 
 ### Important Packages
 ```bash
-pacman -S --needed zen-browser-bin neovim zip unzip fuzzel yazi clipse sddm mpv zed
+pacman -S --needed zen-browser-bin neovim zip unzip yazi mpv zed
 ```
 
 ### Optional Packages
 ```
-pacman -S --needed waybar visual-studio-code-bin google-chrome localsend kdeconnect filelight spacedrive
+pacman -S --needed waybar visual-studio-code-bin google-chrome fuzzel sddm clipse localsend kdeconnect filelight spacedrive
 ```
 
 ### Showcase CLI
