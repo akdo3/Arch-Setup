@@ -145,7 +145,7 @@ pavucontrol
 ```
 1. Go to Input Devices.
 2. chose Microphone (unplugged)
-3. Set As Defalt.
+3. Set As Default.
 
 
 ## Install yay (AUR Helper)
@@ -162,6 +162,7 @@ cd .. && rm -rf yay
 | Topic                                 | Description                |
 |---------------------------------------|----------------------------|
 | [Wine](./knowledge/Wine.md)           | Open Windows Apps          |
+| [Vinegar](./knowledge/Vinegar.md)     | To Download Roblox Studio  |
 | [Languages](./knowledge/Languages.md) | Programing Languages       |
 | [Distrobox](./knowledge/Distrobox.md) | Install And Use Another OS |
 | [Vim](./knowledge/Vim.md)             | How To Use Vim             |
