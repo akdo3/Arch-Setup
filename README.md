@@ -60,6 +60,14 @@ toolkit.legacyUserProfileCustomizations.stylesheets
 ```
 and enable it.
 
+## zed
+
+### Extensions
+```
+Material Icon Theme
+Rainbow CSV
+```
+
 ## Dark/Light Mode
 
 ### Dark Mode
