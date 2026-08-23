@@ -2,7 +2,7 @@
 
 ## Installation
 ```bash
-sudo pacman -S --needed zsh eza bat zoxide ttf-hack-nerd fzf
+sudo pacman -S --needed zsh eza bat zoxide ttf-hack-nerd fzf fd
 ```
 
 ## Change Default Shell
