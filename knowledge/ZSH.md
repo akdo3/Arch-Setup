@@ -33,3 +33,11 @@ fi
 cd .config/zsh
 touch .zshenv
 ```
+
+and past from .config/zsh.
+
+## Some More Stuff
+```
+mkdir -p .local/state/zsh
+mkdir -p .cache/zsh
+```
