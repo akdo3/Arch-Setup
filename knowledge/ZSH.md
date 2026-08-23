@@ -32,6 +32,7 @@ fi
 ```bash
 cd .config/zsh
 touch .zshenv
+touch .zshrc
 ```
 
 and past from .config/zsh.
