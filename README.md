@@ -19,7 +19,7 @@ sudo systemctl enable ufw
 
 ### Important Packages
 ```bash
-pacman -S --needed zen-browser-bin neovim zip unzip yazi mpv zed
+pacman -S --needed zen-browser-bin neovim zip unzip yazi mpv proton-vpn-gtk-app zed
 ```
 
 ### Optional Packages
