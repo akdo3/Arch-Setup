@@ -161,6 +161,7 @@ cd .. && rm -rf yay
 
 | Topic                                 | Description                |
 |---------------------------------------|----------------------------|
+| [ZSH](./knowledge/ZSH.md)             | Terminal Shell             |
 | [Wine](./knowledge/Wine.md)           | Open Windows Apps          |
 | [Vinegar](./knowledge/Vinegar.md)     | To Download Roblox Studio  |
 | [Languages](./knowledge/Languages.md) | Programing Languages       |
