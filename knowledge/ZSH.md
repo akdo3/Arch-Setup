@@ -28,3 +28,8 @@ then
 fi
 ```
 
+## Create The Files
+```bash
+cd .config/zsh
+touch .zshenv
+```
