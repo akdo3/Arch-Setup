@@ -12,6 +12,10 @@ flatpak install flathub org.vinegarhq.Vinegar
 ```
 
 ## Run
+
+### Run VPN
+
+### Run Vinegar
 ```bash
 flatpak run org.vinegarhq.Vinegar
 ```
