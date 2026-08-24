@@ -31,7 +31,7 @@ fi
 ## Create The Files
 ```bash
 cd .config/zsh
-touch .zshenv .zshrc
+touch .zshenv .zshrc aliases.zsh plugins.zsh
 ```
 
 and past from .config/zsh.
