@@ -34,7 +34,7 @@ cd .config/zsh
 touch .zshenv .zshrc aliases.zsh plugins.zsh
 ```
 
-and past from .config/zsh.
+and past from [.config/zsh](././.config/zsh).
 
 ## Some More Stuff
 ```
