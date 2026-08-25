@@ -13,13 +13,18 @@ setopt HIST_FIND_NO_DUPS
 # Shell behaviour
 setopt AUTOCD
 setopt NUMERIC_GLOB_SORT
-setopt CORRECT
-setopt CORRECT_ALL
 setopt INTERACTIVE_COMMENTS
+
+FUNCNEST=100
 
 # Bindings
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
+
+bindkey '^Z' undo
+bindkey '^Y' redo
+
+bindkey ' ' magic-space
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
@@ -28,10 +33,21 @@ eval "$(zoxide init zsh)"
 zmodload zsh/complist
 autoload -Uz compinit
 
-compinit -C -i -d "$XDG_CACHE_HOME/zsh/zcompdump"
+compinit -i -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' list-dirs-first true
+
+# Fuzzy finder
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+# starship
+eval "$(starship init zsh)"
+
+# Files
+source "$ZDOTDIR/fzf.zsh"
+source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/plugins.zsh"
