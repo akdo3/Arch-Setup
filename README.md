@@ -159,13 +159,14 @@ cd .. && rm -rf yay
 
 # knowledge
 
-| Topic                                 | Description                |
-|---------------------------------------|----------------------------|
-| [ZSH](./knowledge/ZSH.md)             | Terminal Shell             |
-| [Wine](./knowledge/Wine.md)           | Open Windows Apps          |
-| [Vinegar](./knowledge/Vinegar.md)     | To Download Roblox Studio  |
-| [Languages](./knowledge/Languages.md) | Programing Languages       |
-| [Distrobox](./knowledge/Distrobox.md) | Install And Use Another OS |
-| [Vim](./knowledge/Vim.md)             | How To Use Vim             |
+| Topic                                   | Description                |
+|-----------------------------------------|----------------------------|
+| [ZSH](./knowledge/ZSH.md)               | Terminal Shell             |
+| [Quickshell](./knowledge/Quickshell.md) | status bars                |
+| [Wine](./knowledge/Wine.md)             | Open Windows Apps          |
+| [Vinegar](./knowledge/Vinegar.md)       | To Download Roblox Studio  |
+| [Languages](./knowledge/Languages.md)   | Programing Languages       |
+| [Distrobox](./knowledge/Distrobox.md)   | Install And Use Another OS |
+| [Vim](./knowledge/Vim.md)               | How To Use Vim             |
 
 
