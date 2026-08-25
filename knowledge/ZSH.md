@@ -1,16 +1,43 @@
 # ZSH
 
-## Installation
+## Copy & Paste
+```bash
+sudo pacman -S --needed zsh eza bat zoxide fzf fd starship
+chsh -s $(which zsh)
+sudo nvim /etc/zsh/zshenv
+cd .config/zsh
+touch .zshenv .zshrc aliases.zsh plugins.zsh fzf.zsh
+mkdir -p .local/state/zsh
+mkdir -p .cache/zsh
+```
+
+### and past:
+```
+if [[ -z "$XDG_CONFIG_HOME" ]]
+then
+  export XDG_CONFIG_HOME="$JOME/.config"
+fi
+
+if [[ -d "$XDG_CONFIG_HOME/zsh" ]]
+then
+  export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+fi
+```
+
+and past from [.config/zsh](./../.config/zsh).
+
+
+## Manual Installation
 ```bash
 sudo pacman -S --needed zsh eza bat zoxide fzf fd starship
 ```
 
-## Change Default Shell
+### Change Default Shell
 ```bash
 chsh -s $(which zsh)
 ```
 
-## Change Config Files From Home Folder To .config Folder
+### Change Config Files From Home Folder To .config Folder
 ```bash
 sudo nvim /etc/zsh/zshenv
 ```
@@ -28,7 +55,7 @@ then
 fi
 ```
 
-## Create The Files
+### Create The Files
 ```bash
 cd .config/zsh
 touch .zshenv .zshrc aliases.zsh plugins.zsh fzf.zsh
@@ -36,7 +63,7 @@ touch .zshenv .zshrc aliases.zsh plugins.zsh fzf.zsh
 
 and past from [.config/zsh](./../.config/zsh).
 
-## Some More Stuff
+### Some More Stuff
 ```
 mkdir -p .local/state/zsh
 mkdir -p .cache/zsh
