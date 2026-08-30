@@ -2,6 +2,6 @@
 
 ## Installation
 ```bash
-sudo pacman -S --needed quickshell wl-clipboard
+sudo pacman -S --needed quickshell wl-clipboard wtype
 ```
 
