@@ -48,11 +48,11 @@ hl.monitor({
 
 hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar & hyprpaper & swww & fcitx5 & swww-daemon")
-    hl.exec_cmd("~/.config/waybar/scripts/auto-reload.sh")
-    hl.exec_cmd("/home/akdo/.config/dynamic_wallpaper_copy/daemon.sh")
+    -- hl.exec_cmd("/home/akdo/.config/waybar/scripts/auto-reload.sh")
+    -- hl.exec_cmd("/home/akdo/Documents/Homemade_Linux_Tools/wifi-restart")
+    -- hl.exec_cmd("/home/akdo/.config/dynamic_wallpaper_copy/daemon.sh")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-
-    hl.exec_cmd("wl-paste --watch cliphist store")
+    hl.exec_cmd("clipse -listen")
 end)
 
 
@@ -170,7 +170,7 @@ hl.config({
             popups = true,
             popups_ignorealpha = 0.2,
         },
-        
+
     },
 
 
@@ -192,7 +192,6 @@ hl.window_rule({ match = { class = "thunar" }, opacity = "0.7 override 0.7 overr
 hl.window_rule({ match = { class = "fuzzel" }, opacity = "0.7 override 0.7 override" })
 
 hl.layer_rule({ match = { namespace = "fuzzel" }, blur = true })
-
 
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -301,7 +300,7 @@ hl.config({
         kb_layout = "us,ara",
         kb_variant = ",",
         kb_model   = "",
-        kb_options = "grp:alt_shift_toggle",
+        kb_options = "grp:win_space",
         kb_rules   = "",
         resolve_binds_by_sym = true,
 
