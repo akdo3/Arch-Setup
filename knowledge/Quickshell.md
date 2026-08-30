@@ -2,6 +2,6 @@
 
 ## Installation
 ```bash
-sudo pacman -S quickshell
+sudo pacman -S --needed quickshell wl-clipboard
 ```
 
