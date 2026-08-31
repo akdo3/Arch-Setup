@@ -157,11 +157,6 @@ makepkg -sri
 cd .. && rm -rf yay
 ```
 
-### yay Package
-```bash
-yay -S --needed cloudflare-warp-bin
-```
-
 # knowledge
 
 | Topic                                   | Description                |
