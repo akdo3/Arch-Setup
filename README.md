@@ -167,6 +167,7 @@ yay -S --needed cloudflare-warp-bin
 | Topic                                   | Description                |
 |-----------------------------------------|----------------------------|
 | [ZSH](./knowledge/ZSH.md)               | Terminal Shell             |
+| [WireGuard](./knowledge/WireGuard.md)   | VPN                        |
 | [Quickshell](./knowledge/Quickshell.md) | status bars                |
 | [Wine](./knowledge/Wine.md)             | Open Windows Apps          |
 | [Vinegar](./knowledge/Vinegar.md)       | To Download Roblox Studio  |
