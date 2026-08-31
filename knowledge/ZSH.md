@@ -2,7 +2,7 @@
 
 ## Copy & Paste
 ```bash
-sudo pacman -S --needed zsh eza bat zoxide fzf fd starship
+sudo pacman -S --needed zsh eza bat zoxide fd starship
 chsh -s $(which zsh)
 sudo nvim /etc/zsh/zshenv
 cd .config/zsh
@@ -29,7 +29,7 @@ and past from [.config/zsh](./../.config/zsh).
 
 ## Manual Installation
 ```bash
-sudo pacman -S --needed zsh eza bat zoxide fzf fd starship
+sudo pacman -S --needed zsh eza bat zoxide fd starship
 ```
 
 ### Change Default Shell
