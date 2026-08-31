@@ -2,11 +2,11 @@
 
 ## Copy & Paste
 ```bash
-sudo pacman -S --needed zsh eza bat zoxide fd starship
+sudo pacman -S --needed zsh eza bat zoxide starship
 chsh -s $(which zsh)
 sudo nvim /etc/zsh/zshenv
 cd .config/zsh
-touch .zshenv .zshrc aliases.zsh plugins.zsh fzf.zsh
+touch .zshenv .zshrc aliases.zsh plugins.zsh
 mkdir -p .local/state/zsh
 mkdir -p .cache/zsh
 ```
@@ -29,7 +29,7 @@ and past from [.config/zsh](./../.config/zsh).
 
 ## Manual Installation
 ```bash
-sudo pacman -S --needed zsh eza bat zoxide fd starship
+sudo pacman -S --needed zsh eza bat zoxide starship
 ```
 
 ### Change Default Shell
