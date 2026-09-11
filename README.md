@@ -157,6 +157,10 @@ makepkg -sri
 cd .. && rm -rf yay
 ```
 
+```
+yay -S spacedrive-bin
+```
+
 # knowledge
 
 | Topic                                   | Description                |
